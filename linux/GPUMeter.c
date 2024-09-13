@@ -174,7 +174,7 @@ const MeterClass GPUMeter_class = {
    .maxItems = ARRAYSIZE(GPUMeter_engineData) + 1,
    .total = 100.0,
    .attributes = GPUMeter_attributes,
-   .name = "GPU",
-   .uiName = "GPU usage",
-   .caption = "GPU"
+   .name = "NPU",
+   .uiName = "NPU usage",
+   .caption = "NPU"
 };

@@ -167,11 +167,11 @@ void GPU_readProcessData(LinuxProcessTable* lpt, LinuxProcess* lp, openat_arg_t 
             assert(!pdev || String_eq(pdev, p));
             if (!pdev)
                pdev = xStrdup(p);
-         } else if (line[0] == 'e' && String_startsWith(line, "engine-")) {
+         } else if (line[0] == 'e' && String_startsWith(line, "engine-npu-")) {
             if (sstate == SECST_DUPLICATE)
                continue;
 
-            const char* engineStart = line + strlen("engine-");
+            const char* engineStart = line + strlen("engine-npu-");
 
             if (String_startsWith(engineStart, "capacity-"))
                continue;
